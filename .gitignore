@@ -1,0 +1,32 @@
+.DS_Store
+
+# Build output
+Build/
+.build/
+
+# Swift Package Manager
+Package.resolved
+Packages/
+.swiftpm/
+.swiftpm/configuration/registries.json
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+
+# Xcode
+DerivedData/
+xcuserdata/
+
+# Editors
+.vscode/
+.idea/
+
+# User-provided fonts
+Assets/Fonts/
+assets/fonts/
+
+# Secrets
+.netrc
+
+# Logs / temp
+*.log
+*.tmp
+*.swp
