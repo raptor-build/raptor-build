@@ -7,7 +7,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/raptor-build/raptor.git",
-            from: "0.1.1"
+            from: "0.1.2"
         )
     ],
     targets: [
