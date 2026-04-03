@@ -140,7 +140,7 @@ protocol PostProcessor
 @{ReferenceWidget:var removeTitleFromBody: Bool}
 : Whether to remove the post's title from its body, derived from the first `<h1>`.
 
-@{ReferenceWidget:var syntaxHighlighterLanguages: Set<SyntaxHighlighterLanguage>}
+@{ReferenceWidget:var syntaxHighlighterLanguages: Set&lt;SyntaxHighlighterLanguage&gt;}
 : The syntax highlighter languages used within the post.
 
 @{ReferenceWidget:func delimitRawMarkup(_: String) -> String}

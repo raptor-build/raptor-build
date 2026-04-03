@@ -7,7 +7,7 @@ description: Create interactive buttons with actions, tinting, sizing, shapes, c
 The most common way to create a `Button` is with a text label and a single action:
 
 ```swift
-Button("Download", action: .navigate(to: "/download"))
+Button("Download", action: .hideElement("myElement"))
 ```
 
 To trigger more than one action, use the action-builder initializer:

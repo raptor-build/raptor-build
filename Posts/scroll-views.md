@@ -15,7 +15,7 @@ description: Scrollable containers with horizontal or vertical scrolling, snap a
 A `ScrollView` requires an explicit `id` and a scroll axis:
 
 ```swift
-ScrollView(id: "features") {
+ScrollView(id: "myScrollView") {
    Color.blue
    Color.red
    Color.yellow
@@ -28,7 +28,7 @@ ScrollView(id: "features") {
 By default, scrolling is horizontal with continuous (non-snapping) behavior. You can switch between horizontal and vertical scrolling using `ScrollAxis`:
 
 ```swift
-ScrollView(.vertical, id: "features") {
+ScrollView(.vertical, id: "myScrollView") {
    Color.blue
       .frame(height: 150)
    Color.red
@@ -43,7 +43,7 @@ ScrollView(.vertical, id: "features") {
 `ScrollView` supports multiple scroll snapping strategies via `scrollBehavior(_:)`:
 
 ```swift
-ScrollView(id: "features") {
+ScrollView(id: "myScrollView") {
    Color.blue
       .frame(width: 500)
    Color.red
@@ -61,7 +61,7 @@ Available behaviors include `.continuous` (no snapping, default) and `.viewAlign
 You can enable automatic scrolling between child views using `autoAdvance(every:loops:)`:
 
 ```swift
-ScrollView(id: "features") {
+ScrollView(id: "myScrollView") {
    Color.blue
       .frame(width: 500)
    Color.red
@@ -80,7 +80,7 @@ This enables script-driven scrolling that advances at a fixed interval, can loop
 For marquee-style or showcase content, `ScrollView` supports seamless infinite scrolling that pauses on hover:
 
 ```swift
-ScrollView(.horizontal, id: "logos") {
+ScrollView(.horizontal, id: "myScrollView") {
    Color.blue
       .frame(width: 500)
    Color.red
@@ -104,7 +104,7 @@ ScrollView(.horizontal, id: "logos") {
 Use `ScrollTo(index:id:)` to scroll to a specific child by index (0-based):
 
 ```swift
-Button("Go to second item", action: .scroll(to: 1, id: "features"))
+Button("Go to second item", action: .scroll(to: 1, in: "myScrollView"))
 ```
 
 This smoothly scrolls the targeted slide into view and centers it along the scroll axis.
