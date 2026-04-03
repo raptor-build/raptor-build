@@ -27,14 +27,16 @@ struct MainLayout: Layout {
             .navigationItemRole(.logo)
 
             Spacer()
-
-            Link("Download", destination: "https://github.com/raptor-build/raptor")
-                .linkStyle(.button)
-                .linkOpenBehavior(.newWindow)
-                .buttonShape(.capsule)
-                .buttonStyle(.filledProminent)
-                .controlSize(.small)
-                .margin(.trailing, -8)
+            Link(destination: "https://github.com/raptor-build/raptor") {
+                Label("GitHub", systemImage: "github")
+                    .labelIconToTitleSpacing(5)
+            }
+            .linkStyle(.button)
+            .linkOpenBehavior(.newWindow)
+            .buttonShape(.capsule)
+            .buttonStyle(.filledProminent)
+            .controlSize(.small)
+            .margin(.trailing, -8)
         }
         .margin(.vertical, 25)
         .position(.fixedTop)
@@ -59,6 +61,11 @@ struct MainLayout: Layout {
                 Text("""
                 Licensed under Creative Commons Attribution 4.0 International (CC-BY-4.0).
                 """)
+                Text {
+                    Link("raptor.build source code ↗", destination: "https://github.com/raptor-build/raptor-build")
+                        .linkOpenBehavior(.newWindow)
+                        .tint(.white.opacity(0.75))
+                }
                 .margin(.bottom, 25)
             }
             .font(.xxSmall)

@@ -30,24 +30,36 @@ struct Home: Page {
                 .resizable()
                 .frame(maxHeight: 350)
                 .foregroundStyle(.white.opacity(0.15))
+
             VStack(alignment: .center) {
                 Group {
                     Text("RAPTOR")
                         .font(.custom("Advocate", style: .title1, size: 100, weight: .bold))
                         .lineSpacing(1)
 
-                    Text("a Swift framework for static sites and server-side rendering")
-                        .font(.title4)
+                    Text("SwiftUI for the web")
+                        .font(.system(.title2, size: 50))
                         .fontWeight(.regular)
                         .margin(.bottom, 25)
                 }
                 .multilineTextAlignment(.center)
 
-                Link("Get Started", destination: "/getting-started")
+                HStack {
+                    Link("Get Started", destination: "/getting-started")
+                        .linkStyle(.button)
+                        .buttonStyle(.filledProminent)
+                        .buttonShape(.capsule)
+                        .controlSize(.xLarge)
+
+                    Link(destination: "https//github.com/raptor-build/raptor") {
+                        Label("Star on GitHub", systemImage: "star-fill")
+                    }
                     .linkStyle(.button)
-                    .buttonStyle(.filledProminent)
+                    .linkOpenBehavior(.newWindow)
+                    .buttonStyle(.filled)
                     .buttonShape(.capsule)
                     .controlSize(.xLarge)
+                }
             }
             .frame(minHeight: 450, alignment: .center)
         }
@@ -78,6 +90,16 @@ struct Home: Page {
             """
         }
         .lineNumberVisibility(.visible)
+
+        Text {
+            Link(destination: "https://github.com/raptor-build/raptor-starter") {
+                Label("View the starter template", systemImage: "arrow-right")
+                    .iconPlacement(.trailing)
+            }
+            .linkOpenBehavior(.newWindow)
+            .tint(.white.opacity(0.9))
+        }
+        .multilineTextAlignment(.center)
         .margin(.bottom, 50)
     }
 
