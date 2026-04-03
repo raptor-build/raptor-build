@@ -256,7 +256,7 @@ Modal(id: "settings") {
 ### Raptor
 
 ```swift
-Button("Open settings", action: showModal("settings")
+Button("Open settings", action: showModal("settings"))
    .modal(id: "settings") {
       Text("Settings")
    }
