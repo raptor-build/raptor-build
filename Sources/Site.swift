@@ -21,8 +21,10 @@ struct RaptorWebsite {
 }
 
 struct MySite: Site {
-    var name = "Raptor | Swift Static Site Generator with Server-Side Rendering"
+    var name = "Raptor | SwiftUI for the Web"
     var url = URL(static: "https://raptor.build")
+    var favicon: URL? = URL(string: "/images/raptor-favicon.png")
+    var version: String = "0.1.3"
     var description: String? = """
     Raptor is a modern Swift static site generator with built-in support \
     for blog posts, multilingual sites, and server-side rendering via Vapor.

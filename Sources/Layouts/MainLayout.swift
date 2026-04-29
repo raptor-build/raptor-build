@@ -52,15 +52,24 @@ struct MainLayout: Layout {
 
         Main()
             .margin(.bottom, 100)
-            .background(background)
+            .environmentEffect(\.horizontalSizeClass) { content, sizeClass in
+                if let background, sizeClass > .compact {
+                    content.background(background)
+                }
+            }
             .preferredColorScheme(colorScheme)
+            .shareLinkImage("https://raptor.build/images/raptor-share.png?v=0.1.2")
+            .shareLinkDescription("A SwiftUI-inspired framework for building type-safe websites in Swift.")
+            .analytics(.plausible(siteID: "gF6rd0TQFgBuEy9hdr44W"))
 
         Footer {
             Group {
-                Text("© 2026 Tailored Swift LLC")
-                Text("""
-                Licensed under Creative Commons Attribution 4.0 International (CC-BY-4.0).
-                """)
+                Text("© 2026 The Raptor Authors")
+                    .foregroundStyle(.white)
+                Text("SwiftUI is a trademark of Apple Inc. and has no affiliation with Raptor.")
+                    .foregroundStyle(.white.opacity(0.75))
+                Text(" Licensed under Creative Commons Attribution 4.0 International (CC-BY-4.0)")
+                    .foregroundStyle(.white.opacity(0.75))
                 Text {
                     Link("raptor.build source code ↗", destination: "https://github.com/raptor-build/raptor-build")
                         .linkOpenBehavior(.newWindow)
@@ -69,7 +78,6 @@ struct MainLayout: Layout {
                 .margin(.bottom, 25)
             }
             .font(.xxSmall)
-            .foregroundStyle(.white)
             .multilineTextAlignment(.center)
         }
     }

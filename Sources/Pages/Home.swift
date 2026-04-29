@@ -38,8 +38,12 @@ struct Home: Page {
                         .lineSpacing(1)
 
                     Text("SwiftUI for the web")
-                        .font(.system(.title2, size: 50))
+                        .font(.title2)
                         .fontWeight(.regular)
+                        .environmentEffect(\.horizontalSizeClass) { content, size in
+                            content
+                                .fontSize(size == .compact ? 40 : 50)
+                        }
                         .margin(.bottom, 25)
                 }
                 .multilineTextAlignment(.center)
@@ -51,7 +55,7 @@ struct Home: Page {
                         .buttonShape(.capsule)
                         .controlSize(.xLarge)
 
-                    Link(destination: "https//github.com/raptor-build/raptor") {
+                    Link(destination: "https://github.com/raptor-build/raptor") {
                         Label("Star on GitHub", systemImage: "star-fill")
                     }
                     .linkStyle(.button)
@@ -89,6 +93,7 @@ struct Home: Page {
             }
             """
         }
+        .syntaxHighlighterTheme(.xcode.dark())
         .lineNumberVisibility(.visible)
 
         Text {

@@ -22,15 +22,11 @@ extension Font {
 
 struct MainTheme: Theme {
     func theme(site: Content, colorScheme: ColorScheme) -> Content {
-        if colorScheme == .dark {
-            site
-        } else {
-            site
-                .codeFont(.mdIO)
-                .inlineCodeStyle(InlineCode())
-                .syntaxHighlighterTheme(.xcode)
-                .contentWidth(max: 800)
-                .accent(.red)
-        }
+        site
+            .codeFont(.mdIO)
+            .inlineCodeStyle(InlineCode())
+            .syntaxHighlighterTheme(.xcode)
+            .contentWidth(max: 800)
+            .accent(.red)
     }
 }

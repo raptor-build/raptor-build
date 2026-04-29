@@ -99,4 +99,8 @@ The [raptor-build/raptor-build](https://github.com/raptor-build/raptor-build){ta
 
 ## License
 
-Raptor is licensed under the GNU General Public License v3+ (GPLv3+). You're free to build and publish any kind of website—personal, commercial, whatever—and all the code your site generates is completely yours. Raptor itself can be used as a dependency in GPLv3-compatible open-source projects, with separate licensing available for proprietary applications.
+Raptor is licensed under MIT, which, with a little attribution, gives programmers nearly limitless freedom in using its code. This includes use in closed-source projects, projects with different licenses, and other site generators.
+
+## Acknowledgements
+
+Raptor uses Prism for syntax highlighting, Lunr.js for search, and Bootstrap Icons for symbols. Raptor also builds upon its authors' prior contributions to Ignite—hundreds of hours of work that shaped Ignite's current API and served as the launchpad for Raptor's own. All of the above are MIT licensed.

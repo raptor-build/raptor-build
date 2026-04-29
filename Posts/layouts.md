@@ -42,6 +42,9 @@ struct MyLayout: Layout {
 
        Main {
            content // <- The page's body gets inserted here
+       }
+
+       Footer {
            SubscribeForm()
        }
    }
